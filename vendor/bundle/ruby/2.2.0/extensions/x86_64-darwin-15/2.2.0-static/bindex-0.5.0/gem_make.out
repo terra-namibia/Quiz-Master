@@ -1,0 +1,11 @@
+/Users/terauchi/.rbenv/versions/2.2.2/bin/ruby -r ./siteconf20180723-40121-h4xk8b.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180723-40121-odbq08/bindex

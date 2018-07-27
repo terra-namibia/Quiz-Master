@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuizMaster</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("QuizMaster", "/quizzes/index") %>
+      </div>
+      <ul class="header-menus">
+        <% if params["controller"] == "quizzes" %>
+          <li>
+            <%= link_to("クイズ一覧", "/quizzes/index") %>
+          </li>
+          <li>
+            <%= link_to("クイズを作成する", "/quizzes/new") %>
+          </li>
+          <li>
+            <%= link_to("クイズモードへ", "/answer") %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("クイズ作成画面へ戻る", "/quizzes/index") %>
+          </li>
+        <% end %>
+      </ul>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

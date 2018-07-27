@@ -1,0 +1,22 @@
+<div class="main quizzes-index">
+  <div class="container">
+    <h1 class="form-heading">クイズ</h1>
+    <%= form_tag("/answer/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% no = 0 %>
+          <% @quizzes.each do |quiz| %>
+            <div class="quizzes-index-item">
+              <div class="quiz-right">
+                <%= "No:#{no += 1}" %>
+                <%= "Question:#{quiz.content}" %>
+                <textarea name="answer"></textarea>
+                <input type="submit" value="回答">
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

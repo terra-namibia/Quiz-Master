@@ -1,0 +1,20 @@
+<div class="main quizzes-new">
+  <div class="container">
+    <h1 class="form-heading">クイズを作成する</h1>
+    <%= form_tag("/quizzes/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @quiz.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          
+          <textarea name="content"><%= @quiz.content %></textarea>
+          <textarea name="answer"><%= @quiz.answer %></textarea>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

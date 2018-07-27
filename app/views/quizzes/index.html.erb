@@ -1,0 +1,14 @@
+<div class="main quizzes-index">
+  <div class="container">
+    <% @quizzez.each do |quiz| %>
+      <div class="quizzes-index-item">
+        <div class="quiz-left">
+          <%= link_to("[Question:#{quiz.id}]", "/quizzes/#{quiz.id}") %>
+        </div>
+        <div class="quiz-right">
+          <%= link_to(quiz.content, "/quizzes/#{quiz.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

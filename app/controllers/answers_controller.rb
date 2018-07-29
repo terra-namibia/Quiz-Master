@@ -7,4 +7,9 @@ class AnswersController < ApplicationController
       @quizzes = Quiz.all
     end      
   end
+  def answer_json
+    @quizzes = Quiz.all
+    render json: @quizzes
+  end
+    
 end

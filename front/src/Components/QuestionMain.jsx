@@ -3,7 +3,7 @@ import AnswersContainer from './AnswersContainer'
 import Header from './Header'
 import axios from 'axios'
 
-class MainContainer extends React.Component {
+class QuestionMain extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -69,4 +69,4 @@ class MainContainer extends React.Component {
 
 }
 
-export default MainContainer
+export default QuestionMain

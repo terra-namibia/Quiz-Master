@@ -18,9 +18,9 @@ class QuizzesController < ApplicationController
     )
     if @quiz.save
       flash[:notice] = "クイズを作成しました"
-      redirect_to("/quiz/index")
+      redirect_to("/quizzes/index")
     else
-      render("quiz/new")
+      render("quizzes/new")
     end
   end
 
@@ -34,9 +34,9 @@ class QuizzesController < ApplicationController
     @quiz.answer = params[:answer]
     if @quiz.save
       flash[:notice] = "クイズを編集しました"
-      redirect_to("/quiz/index")
+      redirect_to("/quizzes/index")
     else
-      render("quiz/edit")
+      render("quizzes/edit")
     end
   end
   
@@ -44,7 +44,7 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.find_by(id: params[:id])
     @quiz.destroy
     flash[:notice] = "クイズを削除しました"
-    redirect_to("/quiz/index")
+    redirect_to("/quizzes/index")
   end
 
 end

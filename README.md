@@ -16,4 +16,6 @@ The technical exam for web developers.
 
 ```npm start```
 
+To create questions, go to http://localhost:3001/quizzes/index on browser.
 
+To answer, go to http://localhost:3000/question on browser.

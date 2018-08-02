@@ -1,24 +1,19 @@
-# README
+# Quiz Master
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The technical exam for web developers.
 
-Things you may want to cover:
 
-* Ruby version
+## Instructions
+```git clone https://github.com/terra-namibia/Quiz-Master.git```
 
-* System dependencies
+```cd Quiz-Master```
 
-* Configuration
+```rails db:migrate```
 
-* Database creation
+```rails server -p 3001```
 
-* Database initialization
+```cd front/```
 
-* How to run the test suite
+```npm start```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
